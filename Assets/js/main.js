@@ -19,6 +19,9 @@ function soundalert()
             if (response != "") {
                 $("#soundalert").html(response);
             }
+        },
+        error : function(xhr,textStatus,errorThrown){
+          if (xhr.status == 401) { return false;}
         }
    });
 }
